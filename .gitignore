@@ -1,0 +1,7 @@
+# Binary output
+blackout-main
+
+# IDE and OS settings
+.vscode/
+.idea/
+.DS_Store
