@@ -50,6 +50,10 @@ func setupCellParser(c *colly.Collector, targetPidchergaId string, offColor stri
 	targetHref := "/unhooking-search.php?pidcherga_id=" + targetPidchergaId
 
 	c.OnHTML("td:has(a)", func(e *colly.HTMLElement) {
+
+		if len(*colorsArr) >= 48 {
+			return
+		}
 		href := e.ChildAttr("a", "href")
 		if href != targetHref {
 			return
@@ -93,6 +97,9 @@ func GenerateBlackoutLogic(c *colly.Collector, now time.Time) ([]string, bool) {
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fetch error: %v\n", err)
 		return result, false
+	}
+	if len(colorsArr) > 48 {
+		colorsArr = colorsArr[:48]
 	}
 
 	for i, val := range colorsArr {
