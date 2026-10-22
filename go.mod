@@ -1,6 +1,6 @@
 module github.com/K0Nz1dd/blackout-module-waybar
 
-go 1.27.1
+go 1.27.3
 
 require github.com/gocolly/colly/v2 v2.3.0
 
@@ -11,7 +11,7 @@ require (
 	github.com/antchfx/xmlquery v1.5.2 // indirect
 	github.com/antchfx/xpath v1.3.9 // indirect
 	github.com/bits-and-blooms/bitset v1.26.0 // indirect
-	github.com/gobwas/glob v1.0.0 // indirect
+	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect
